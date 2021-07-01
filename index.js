@@ -1,64 +1,65 @@
-// Criar um programa que calcula a média 
-// Das turmas de alunos e envia 
-// mensagem do calculo da média.
+//Criar um programa que calcula a media 
+//das turmas de alunos e envia 
+// mensagem do calculo da media
 
-const AlunosdaTurmaA = [
+const alunosdaturmaA = [
     {
-        nome: 'João',
-        nota: 1.8
+        nome: "Mayk",
+        nota: 9.8
     },
-    { 
-        nome: 'Mayk',
+    {
+        nome: "José",
         nota: 10
     },
     {
-        nome: 'fulano',
-        nota: 6
+        nome: "Carlito",
+        nota: 10
     },
     {
-        nome: 'mais um aluno',
-        nota: 0
+        nome: "alunito",
+        nota: 1
     }
 ]
 
-const AlunosdaTurmaB = [
+const alunosdaturmaB = [
     {
-        nome: 'Cleber',
-        nota: 0
-    },
-    { 
-        nome: 'Mariano',
-        nota: 8.5
-    },
-    {
-        nome: 'Cliclano',
+        nome: "Alex",
         nota: 5
     },
     {
-        nome: 'AlunoNovo',
+        nome: "João",
+        nota: 7
+    },
+    {
+        nome: "Gabriel",
+        nota: 0
+    },
+    {
+        nome: "Daniel",
         nota: 10
     }
 ]
 
-function CalculaMedia(alunos) {
+function calculaMedia(alunos) {
     let soma = 0;
     for (let i = 0; i < alunos.length; i++) {
-        soma = soma + alunos[i].nota
-    }
+       soma = soma + alunos[i].nota
+     }    
+
+     const media = soma / alunos.length 
+     return media
 }
 
-const media1 = CalculaMedia(AlunosdaTurmaA)
-const media2 = CalculaMedia(AlunosdaTurmaB)
+const media1 = calculaMedia(alunosdaturmaA)
+const media2 = calculaMedia(alunosdaturmaB)
 
-
-function EnviaMensagem(media, turma) {
-    //se a média for maior que 5, parabenizar
-    if (media > 5) {
-        console.log(`A média da ${turma} foi de ${media}. Parabéns`)
+function EnviaMensagem(media,turma) {
+    if(media > 5) {
+        console.log(`A media da ${turma} foi de ${media}. Parabéns`)
     } else {
-        console.log(`A média da ${turma} é menor que 5`)
+        console.log(`A media da ${turma} foi menor que 5`)
     }
 }
 
 EnviaMensagem(media1, 'TurmaA')
-EnviaMensagem(media2, 'TurmaB') 
+EnviaMensagem(media2, 'TurmaB')
