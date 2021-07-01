@@ -45,9 +45,6 @@ function CalculaMedia(alunos) {
     for (let i = 0; i < alunos.length; i++) {
         soma = soma + alunos[i].nota
     }
-
-    const media = soma / alunos.length
-    return media
 }
 
 const media1 = CalculaMedia(AlunosdaTurmaA)
