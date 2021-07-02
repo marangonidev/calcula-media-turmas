@@ -18,21 +18,18 @@ const usuarios = [
 
 //Percorra a lista de usuários com uma estrutura de repetição imprimindo em tela as informações dos usuários:
 
-function pegarusuarios(usuarios) {
-    for (let i = 0; i < usuarios.length; i++) {
-        console.log(`${usuarios[i].nome} trabalha com ${usuarios[i].tecnologias[0]} e ${usuarios[i].tecnologias[1]}`)
-        
-        const tecnologias = usuarios[i].tecnologias 
-        
-        for (let j = 0; j < tecnologias.length; j++) {
-            if (tecnologias[j] == "CSS") {
-                console.log(`O usuário ${usuarios[i].nome} trabalha com CSS`)
-            } //else {
-                //console.log(`O usuário ${usuarios[i].nome} não trabalha com CSS`)
-            //}
-        } 
+for (let i = 0; i < usuarios.length; i++) {
+    const usarioUsaCss = verificarUsuarioUsaCss(usuarios[i]);
+  
+    if (usarioUsaCss) {
+      console.log(`O usuario ${usuarios[i].nome} utiliza CSS`);
     }
-} 
-
-const users = pegarusuarios(usuarios)
-
+  }
+  
+  function verificarUsuarioUsaCss(usuario) {
+    for (let i = 0; i < usuario.tecnologias.length; i++) {
+      if (usuario.tecnologias[i] === "CSS") {
+        return true;
+      }
+    }
+  }
