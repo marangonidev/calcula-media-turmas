@@ -25,11 +25,11 @@ function pegarusuarios(usuarios) {
         const tecnologias = usuarios[i].tecnologias 
         
         for (let j = 0; j < tecnologias.length; j++) {
-            if (tecnologias[0] == "CSS" || tecnologias[1] == "CSS") {
+            if (tecnologias[j] == "CSS") {
                 console.log(`O usuário ${usuarios[i].nome} trabalha com CSS`)
-            } else {
-                console.log(`O usuário ${usuarios[i].nome} não trabalha com CSS`)
-            }
+            } //else {
+                //console.log(`O usuário ${usuarios[i].nome} não trabalha com CSS`)
+            //}
         } 
     }
 } 
